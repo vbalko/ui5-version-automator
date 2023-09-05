@@ -1,0 +1,28 @@
+{
+  "name": "ui5-version-automator",
+  "version": "1.0.0",
+  "description": "An npm package that automates versioning for SAP UI5 applications, streamlining the release process and ensuring version consistency.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vbalko/ui5-version-automator.git"
+  },
+  "keywords": [
+    "ui5",
+    "version",
+    "auto",
+    "tool"
+  ],
+  "author": "vbalko@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vbalko/ui5-version-automator/issues"
+  },
+  "homepage": "https://github.com/vbalko/ui5-version-automator#readme",
+  "dependencies": {
+    "jsonfile": "^6.1.0"
+  }
+}
