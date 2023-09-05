@@ -8,7 +8,7 @@
         "title": "{{AnalyticalConfigurationName}}",
         "description": "{{key in .properties file}}",
         "applicationVersion": {
-            "version": "1.0.6"
+            "version": "1.0.5"
         },
         "ach": "ach",
         "dataSources": {

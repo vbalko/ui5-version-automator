@@ -2,6 +2,15 @@ const versionManager = require('./versionManager');
 const currentFolderPath = process.cwd();
 const file = versionManager.findManifestJSON(currentFolderPath);
 
+const DEBUG = true;
+//read DEBUG env variable if it is set to true
+const debug = process.env.DEBUG === 'true' || DEBUG ? true : false;
+
+if (debug) {
+    console.log("DEBUG: currentFolderPath: " + currentFolderPath);
+    console.log("DEBUG: file: " + file);
+} 
+
 versionManager.welcomeMessage();
 let manifestData = versionManager.readManifest(file);
 

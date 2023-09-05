@@ -2,6 +2,10 @@ const fs = require('fs');
 const path = require('path');
 const jsonfile = require('jsonfile');
 
+const DEBUG = true;
+//read DEBUG env variable if it is set to true
+const debug = process.env.DEBUG === 'true' || DEBUG ? true : false;
+
 /**
  * Reads the current version from the manifest data.
  * @param {Object} manifestData - The manifest data object.
@@ -127,7 +131,8 @@ const prepareManifest = (manifestData, newVersion) => {
     //check if manifestData contains sap.app.applicationVersion, if not add it
     if (!manifestData["sap.app"].applicationVersion) {
         manifestData["sap.app"].applicationVersion = {
-            "version": newVersion
+            "version": newVersion,
+            "buildTimestamp": new Date().toISOString()
         };
     } else {
         //update manifestData with new version
@@ -168,7 +173,7 @@ function findManifestJSON(folderPath) {
         const filePath = path.join(folderPath, file);
 
         // Ignore the "node_modules" and "dist" folders
-        if ((file === 'node_modules' || file === 'dist') && fs.statSync(filePath).isDirectory()) {
+        if ((file === 'node_modules' || file === 'dist') || file === 'test' && fs.statSync(filePath).isDirectory()) {
             continue;
         }
 
