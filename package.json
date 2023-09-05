@@ -4,7 +4,7 @@
   "description": "An npm package that automates versioning for SAP UI5 applications, streamlining the release process and ensuring version consistency.",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/versionManager.test.js"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,8 @@
   "homepage": "https://github.com/vbalko/ui5-version-automator#readme",
   "dependencies": {
     "jsonfile": "^6.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0"
   }
 }
