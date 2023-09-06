@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "mocha test/versionManager.test.js",
-    "version": "git fetch --tags && npm test ",
+    "version": "git fetch --tags && npm test && npm version patch  ",
     "preversion": "",
     "postversion": "git add package.json && git commit -m 'Version commit' && git push --follow-tags"
   },
