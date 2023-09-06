@@ -1,6 +1,6 @@
 {
   "name": "ui5-version-automator",
-  "version": "0.5.7",
+  "version": "0.5.8",
   "description": "An npm package that automates versioning for SAP UI5 applications, streamlining the release process and ensuring version consistency.",
   "main": "src/index.js",
   "scripts": {
