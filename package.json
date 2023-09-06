@@ -1,13 +1,13 @@
 {
   "name": "ui5-version-automator",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "An npm package that automates versioning for SAP UI5 applications, streamlining the release process and ensuring version consistency.",
   "main": "src/index.js",
   "scripts": {
     "test": "mocha test/versionManager.test.js",
     "version": "npm version patch",
     "preversion": "git fetch --tags && npm test",
-    "postversion": "git push --follow-tags"
+    "postversion": "git commit -m 'Version commit' && git push --follow-tags"
   },
   "repository": {
     "type": "git",
